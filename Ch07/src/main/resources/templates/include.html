@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>include</title>
+</head>
+<body>
+	<h3>Thymeleaf include</h3>
+	
+	<h4>include 기본</h4>
+	<!--타임리프 가상 태그 -->
+	<th:block th:include="/fragment/header.html" />
+	<main>
+		<h3>main include</h3>
+	</main>
+	<th:block th:include="/fragment/footer.html" />
+	<hr/>
+
+	<h4>include insert</h4>
+	<!-- div 태그 안에 include 됨-->
+	<div th:insert="/fragment/header.html"></div>		
+	<main>
+		<h3>main insert</h3>
+	</main>
+	<div th:insert="/fragment/footer.html"></div>
+	<hr/>
+
+	<h4>include replace</h4>
+	<!-- div 태그를 해당 태그로 replace 함
+		-> 여기서는 th:block이랑 똑같이 적용이 되는거임
+	-->
+	<div th:replace="/fragment/header.html"></div>		
+	<main>
+		<h3>main replace</h3>
+	</main>
+	<div th:replace="/fragment/footer.html"></div>
+	<hr/>
+	
+	
+</body>
+</html>
