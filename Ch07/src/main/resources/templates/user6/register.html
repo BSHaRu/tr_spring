@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>user6 register</title>
+</head>
+<body>
+	<h3>user6 register</h3>
+	
+	<a th:href="@{/index}">index</a>
+	<a th:href="@{/user6/list}">user6 list</a>
+	
+	<form th:action="@{/user6/register}" method="post">
+		<table border="1">
+			<tr>
+				<th>아이디</th>
+				<td>
+					<input type="text" name="uid" />
+				</td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td>
+					<input type="text" name="name" />
+				</td>
+			</tr>
+			<tr>
+				<th>생일</th>
+				<td>
+					<input type="date" name="birth" />
+				</td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<label>
+						<input type="radio" name="gender" value="M" /> 남
+					</label>
+					<label>
+						<input type="radio" name="gender" value="F" /> 여
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<th>나이</th>
+				<td>
+					<input type="number" name="age">
+				</td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td>
+					<select name="addr" value="addr">
+						<option>서울</option>
+						<option>대전</option>
+						<option>대구</option>
+						<option>부산</option>
+						<option>광주</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>연락처</th>
+				<td>
+					<input type="test" name="hp" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<input type="submit" value="등록하기">
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>
