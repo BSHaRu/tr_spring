@@ -16,11 +16,12 @@ import kr.ch08.entity.User6Entity;
 @Repository
 public interface User6DAO extends JpaRepository<User6Entity, String> {
 
-	// JPA 쿼리 메서드(메서드 명에 규칙이 있음)
-	// find : select
-	// User6Entity : table
-	// By : where
-	// Uid : uid 
+	/* JPA 쿼리 메서드(메서드 명에 규칙이 있음)
+		find : select
+		User6Entity : table
+		By : where
+		Uid : uid
+	 */
 	public User6Entity findUser6EntityByUid(String uid);
 	public List<User6Entity> findUser6EntityByName(String name);
 	public List<User6Entity> findUser6EntityByNameNot(String name);
