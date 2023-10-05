@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko"
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+		<!-- 위에 시큐리티를 정의해주면 html에서도 시큐리티를 통해 사용 가능 -->
+<head>
+	<meta charset="UTF-8">
+	<title>User success</title>
+</head>
+<body>
+	<h4>User 로그인 성공</h4>
+	
+	<p sec:authorize="isAuthenticated()">
+		<!-- MyUserDetails에 있는 uid 객체를 가지고 인증 
+			-> principal : 인증된 사용자를 의미
+		-->
+		아이디 : <span sec:authentication="principal.uid"></span> <br/>
+		이름 : <span sec:authentication="principal.name"></span> <br/>
+		나이 : <span sec:authentication="principal.age"></span> <br/>
+		휴대폰 : <span sec:authentication="principal.hp"></span> <br/>
+		권한 : <span sec:authentication="principal.role"></span> <br/>
+		가입일 : <span sec:authentication="principal.regDate"></span> <br/>
+		<a th:href="@{/user/logout}">logout</a>
+	</p>
+	<hr/>
+	
+	<a th:href="@{/}">main</a>
+</body>
+</html>

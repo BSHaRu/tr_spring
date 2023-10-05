@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko"
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+	<meta charset="UTF-8">
+	<title>ch09 index</title>
+</head>
+<body>
+	<h3>Security 실습</h3>
+	
+	<h4>인증 테스트</h4>
+	<th:block sec:authorize="isAnonymous()">
+		<a th:href="@{/user/register}">User 회원가입</a>
+		<a th:href="@{/user/login}">User 로그인</a>
+	</th:block>
+	
+	<th:block sec:authorize="isAuthenticated()">
+		<a th:href="@{/user/logout}">로그아웃</a>	
+	</th:block>
+	<hr/>
+	
+	<h4>인증 테스트</h4>
+	<th:block sec:authorize="hasAuthority('ADMIN')">
+		<a th:href="@{/admin/index}">관리자</a>
+	</th:block>
+	<th:block sec:authorize="hasAnyAuthority('ADMIN', 'MANAGER')">
+		<a th:href="@{/manager/index}">매니저</a>
+	</th:block>
+	
+</body>
+</html>
