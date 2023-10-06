@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko"
+		xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>REST API index</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<h3>RSET API</h3>
+	
+	<h4>User1</h4>
+	<!--
+		List	: GET 	 - user1
+		Select	: GET 	 - user1/{uid}
+		Register: POST	 - user1
+		Modify 	: PUT	 - user1
+		Delete 	: DELETE - user1/{uid}
+	-->
+	<button id="btnUser1List">목록</button>
+	<button id="btnUserSelect">조회</button>
+	<button id="btnUserRegister">등록</button>
+	<button id="btnUserModify">수정</button>
+	<button id="btnUserDelete">삭제</button>
+	<br/>
+	
+	<h4>CRUD 실습</h4>
+	<a th:href="@{user1/list}">list</a>
+	<a th:href="@{user1/register}">register</a>
+	<hr/>
+	
+	<h4>User3</h4>
+	<!--
+		List	: GET 	 - user1
+		Select	: GET 	 - user1/{uid}
+		Register: POST	 - user1
+		Modify 	: PUT	 - user1
+		Delete 	: DELETE - user1/{uid}
+	-->
+	<button id="btnUser3List">목록</button>
+	<button id="btnUser3Select">조회</button>
+	<button id="btnUser3Register">등록</button>
+	<button id="btnUser3Modify">수정</button>
+	<button id="btnUser3Delete">삭제</button>
+	<hr/>
+	
+	<h4>User6</h4>
+	<a th:href="@{user6/list}">list</a>
+	<a th:href="@{user6/register}">register</a>
+	
+</body>
+
+<script th:src="@{/js/user1.js}"></script>
+<script th:src="@{/js/user3.js}"></script>
+</html>
