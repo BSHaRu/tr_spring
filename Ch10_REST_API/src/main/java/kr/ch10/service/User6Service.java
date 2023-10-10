@@ -29,19 +29,23 @@ public class User6Service {
 		log.info("insert repo : " + repo.save(entity));
 	}
 	public User6DTO seleteUser6(String uid) {
+		// Entity -> DTO
 		User6DTO dto 
 			= mapper.toDTO(repo.findById(uid).get());
 		return dto; 
 	}
 	public List<User6DTO> seleteUser6s() {
+		// Entity -> DTO로 변환
 		List<User6Entity> entity = repo.findAll();
 		return entity.stream().map(mapper::toDTO).toList();
 	}
-	public void updateUser6() {
-		
+	public void updateUser6(User6DTO user6) {
+		// DTO -> Entity
+		User6Entity entity = mapper.toEntity(user6);
+		repo.save(entity);
 	}
-	public void deleteUser6() {
-		
+	public void deleteUser6(String uid) {
+		repo.deleteById(uid);
 	}
 	
 }
