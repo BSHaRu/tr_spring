@@ -1,0 +1,44 @@
+jwt:
+  issuer: sboard
+  secret: mQFgKJ7JPQyptORovZLms3T1cumCe8js
+  
+  
+logging:
+  file:
+    name: log/PJ_sborad.log
+    
+    
+server:
+  servlet:
+    context-path: /
+    
+    
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: '!Q2w3e4r'
+    url: jdbc:mysql://13.124.42.184:3306/Jboard
+    username: jboard
+  devtools:
+    livereload:
+      enabled: true
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
+  security:
+    user:
+      name: user
+      password: 1234
+  thymeleaf:
+    cache: false
+
+    
+    

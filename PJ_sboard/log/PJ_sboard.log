@@ -1,0 +1,32 @@
+2023-10-10T17:05:47.894+09:00  INFO 10196 --- [restartedMain] kr.co.sboard.PjSboardApplication         : Starting PjSboardApplication using Java 17.0.8.1 with PID 10196 (C:\Users\user\Desktop\Workspace\Spring\PJ_sboard\bin\main started by user in C:\Users\user\Desktop\Workspace\Spring\PJ_sboard)
+2023-10-10T17:05:47.894+09:00  INFO 10196 --- [restartedMain] kr.co.sboard.PjSboardApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-10-10T17:05:47.959+09:00  INFO 10196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-10T17:05:47.965+09:00  INFO 10196 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-10-10T17:05:47.979+09:00  WARN 10196 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2023-10-10T17:05:48.002+09:00  INFO 10196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-10T17:05:48.002+09:00  INFO 10196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-10T17:05:48.002+09:00  INFO 10196 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-10T17:05:48.010+09:00  INFO 10196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-10T17:05:48.010+09:00  INFO 10196 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 115 ms
+2023-10-10T17:05:48.025+09:00  INFO 10196 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-10T17:05:48.027+09:00  INFO 10196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-10T17:05:48.027+09:00  INFO 10196 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-10T17:05:48.028+09:00  INFO 10196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-10-10T17:05:48.137+09:00  INFO 10196 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e81e68f
+2023-10-10T17:05:48.138+09:00  INFO 10196 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-10-10T17:05:48.138+09:00  WARN 10196 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-10-10T17:05:48.147+09:00  INFO 10196 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-10T17:05:48.164+09:00  INFO 10196 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-10T17:05:48.192+09:00  INFO 10196 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-10T17:05:48.216+09:00  WARN 10196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-10T17:05:48.223+09:00  INFO 10196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-10T17:05:48.242+09:00  INFO 10196 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c3edad9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ed6ab56, org.springframework.security.web.context.SecurityContextHolderFilter@190494f0, org.springframework.security.web.header.HeaderWriterFilter@169f69d9, org.springframework.security.web.authentication.logout.LogoutFilter@588fca54, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ac578bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@206b8c93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8ad106f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ef61a1e, org.springframework.security.web.access.ExceptionTranslationFilter@5a9e5e17, org.springframework.security.web.access.intercept.AuthorizationFilter@4432884a]
+2023-10-10T17:05:48.273+09:00  INFO 10196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-10T17:05:48.279+09:00  INFO 10196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-10T17:05:48.281+09:00  INFO 10196 --- [restartedMain] kr.co.sboard.PjSboardApplication         : Started PjSboardApplication in 0.401 seconds (process running for 914.757)
+2023-10-10T17:05:48.282+09:00  INFO 10196 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-10T17:05:50.735+09:00  INFO 10196 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-10T17:05:50.741+09:00  INFO 10196 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-10T17:05:50.744+09:00  INFO 10196 --- [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-10T17:05:50.744+09:00  INFO 10196 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-10-10T17:05:50.846+09:00  INFO 10196 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
