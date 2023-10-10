@@ -46,7 +46,7 @@ public class MyUserDetails implements UserDetails {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// 계정이 갖는 권한 목록
 		List<GrantedAuthority> authorities = new ArrayList<>();
-		authorities.add(new SimpleGrantedAuthority(role));
+		authorities.add(new SimpleGrantedAuthority("ROLE_"+role));
 		return authorities;
 	}
 

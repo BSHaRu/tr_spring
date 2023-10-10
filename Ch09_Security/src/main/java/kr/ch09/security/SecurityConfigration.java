@@ -20,6 +20,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
  *   - permitAll : 모든 접근에 대해 허용
  *   - hasRole : 특정 역할(Role)에 대해서만 허용
  *   			-> 반드시 "ROLE_" 접두어를 붙여야 사용 가능
+ *   			=> UserDetails에서 권한 부여 할 때 "ROLE_"을 추가해주면 됨
  *   - hasAuthority : 특정 권한(Permission)에 대해서만 허용
  *   - hasIpAddress : 특정 IP 접근 제어
  *   - hasAnyRole(Role1, Role2...) : 여러 개 지정 가능 
@@ -41,7 +42,7 @@ public class SecurityConfigration {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
 	
 		// 인가 설정(권한부여)
-		/* 기존거는 duplicate 되었고, 그래서 람다식을 통해서 사용하면 정상작동 됨
+		/* 기존거는 deprecated 되었고, 그래서 람다식을 통해서 사용하면 정상작동 됨
 			-> Spring Security 5버전 이상부터는 주석 처리 된 방법으로 안씀
 			=> 지금 6.1.4버전인데 기존 주석 방식은 4버전까지 쓰던 방식이라는 소리임
 			http.authorizeHttpRequests().requestMatchers("/admin/**").hasRole("ADMIN");
