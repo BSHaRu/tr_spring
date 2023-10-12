@@ -23,10 +23,10 @@ public class SecurityConfig {
 			// 인가 권한 설정
 			.authorizeHttpRequests(
 				authorizeHttpRequests -> authorizeHttpRequests
-				.requestMatchers("/admin/**").hasAuthority("ADMIN")
+						.requestMatchers("/admin/**").hasAuthority("ADMIN")
 						.requestMatchers("/article/**").hasAnyAuthority("ADMIN","MANAGER","USER")
-				.requestMatchers("/").permitAll()
-				.requestMatchers("/**").permitAll()				
+						.requestMatchers("/").permitAll()
+						.requestMatchers("/**").permitAll()
 			)
 			// 토큰 방식으로 로그인 처리 방식이라 폼방식 비활성화
 			.formLogin(

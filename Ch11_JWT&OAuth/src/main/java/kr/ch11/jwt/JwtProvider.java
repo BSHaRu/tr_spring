@@ -47,8 +47,6 @@ public class JwtProvider {
 					@Value("${jwt.secret}") String secret) {
 		
 		this.issuer = issuer;
-		// byte[] keyBytes = Decoders.BASE64.decode(secretKey);
-		// HMAC SHA 알고리즘을 이용해 JWT 토큰을 서명하기 위한 key 설정
 		this.secretKey = Keys.hmacShaKeyFor(secret.getBytes());
 	}
 	
@@ -87,7 +85,7 @@ public class JwtProvider {
 	// Security에서 인증하기 위한 Authentication객체 생성
 	public Authentication getAuthentication(String token) {
 		
-		// 입력 받은 accessToken을 가지고 claims정보 조회
+		// 입력 받은 token을 가지고 claims정보 조회
 		Claims claims = getClaims(token);
 		String uid = (String) claims.get("uid");
 		String role = (String) claims.get("role");
