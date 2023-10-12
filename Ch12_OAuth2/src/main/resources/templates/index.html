@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>Ch12 index</title>
+</head>
+<body>
+    <h3>OAuth2 index</h3>
+
+    <p sec:authorize="isAnonymous()">
+        <a th:href="@{/user/login}">OAuth2 login 예제</a>
+    </p>
+
+    <p sec:authorize="isAuthenticated()">
+        <span>아이디 : [[${#authentication.principal.uid}]]</span> <br/>
+        <span>이름 : [[${#authentication.principal.name}]]</span> <br/>
+        <span>별명 : [[${#authentication.principal.nickName}]]</span> <br/>
+        <span sec:authentication="principal.role"></span> <br/>
+        <span sec:authentication="principal.regDate"></span> <br/>
+        <a id="logout" th:href="@{/user/logout}">로그아웃</a>
+    </p>
+</body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    // 로그아웃 정상 처리 되었는가 그 로직 알아보기 위해서 ajax날린 후
+    // js로 로그 찍는 방법이라는데 흠...?
+    $(function(){
+        $("#login").click(function(e){
+            e.preventDefault();
+
+        });
+        tokenSend = (target) => {
+            $.ajax({
+                type: "POST",
+                url: "https://kapi.kakao.com/v1/user/unlink",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Authorization", 'Bearer ' + token);
+                },
+                success: function (res) {
+                    console.log(res);
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+    });
+</script>
+</html>

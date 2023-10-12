@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>user login</title>
+</head>
+<body>
+    <h3>로그인</h3>
+
+    <form>
+        <input type="text" name="id" placeholder="id">
+        <input type="password" name="pass" placeholder="password">
+        <input type="submit" value="로그인">
+    </form>
+
+    <!--이게 표준이고 뒤에 소셜만 달라짐-->
+    <a th:href="@{/oauth2/authorization/kakao}">카카오 로그인</a>
+
+
+</body>
+</html>
