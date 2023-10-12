@@ -24,7 +24,7 @@ public class SecurityConfig {
 			.authorizeHttpRequests(
 				authorizeHttpRequests -> authorizeHttpRequests
 				.requestMatchers("/admin/**").hasAuthority("ADMIN")
-				.requestMatchers("/manage/**").hasAnyAuthority("ADMIN","MANAGER")
+						.requestMatchers("/article/**").hasAnyAuthority("ADMIN","MANAGER","USER")
 				.requestMatchers("/").permitAll()
 				.requestMatchers("/**").permitAll()				
 			)
@@ -40,6 +40,7 @@ public class SecurityConfig {
 			.logout(
 				config -> config.logoutUrl("/user/logout")
 								.invalidateHttpSession(true)
+								.clearAuthentication(true)
 								.logoutSuccessUrl("/user/login?success=200")
 			)
 			// 사용자가 악의적은 요청(공격)을 보내는 것을 방지하는 걸 비활성화
