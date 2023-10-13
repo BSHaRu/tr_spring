@@ -1,0 +1,48 @@
+
+  jwt:
+    issuer: security
+    secret: mQFgKJ7JPQyptORovZLms3T1cumCe8js
+
+  logging:
+    file:
+      name: log/security.log
+
+  server:
+    servlet:
+      context-path: /
+
+  spring:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      password: '!Q2w3e4r'
+      url: jdbc:mysql://13.124.42.184:3306/userdb
+      username: user
+    devtools:
+      livereload:
+        enabled: true
+    jpa:
+      database: mysql
+      hibernate:
+        ddl-auto: update
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      properties:
+        hibernate:
+          format_sql: true
+          show_sql: true
+          use_sql_comments: true
+    security:
+      user:
+        name: user
+        password: 1234
+      oauth2:
+        client:
+          registration:
+            google:
+              client-id: 581209232659-enf5r44i14n48sgliruur091stn5ro70.apps.googleusercontent.com
+              client-secret: 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
+              scope:
+                - email
+                - profile
+    thymeleaf:
+      cache: false

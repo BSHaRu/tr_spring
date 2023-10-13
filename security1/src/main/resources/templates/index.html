@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>security index</title>
+</head>
+<body>
+    <h3>security index</h3>
+
+    <a th:href="@{/login}">로그인</a>
+    <a th:href="@{/register}">회원가입</a>
+    <a th:href="@{/logout}">로그아웃</a>
+</body>
+</html>

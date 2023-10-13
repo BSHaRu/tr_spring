@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+    <h3>Login page</h3>
+
+    <form th:action="@{/login}" method="post">
+        <input type="text" name="uid" placeholder="username"> <br/>
+        <input type="password" name="pass" placeholder="password"> <br/>
+        <button type="submit" value="Login">로그인</button> <br/>
+    </form>
+    <a th:href="@{/oauth2/authorization/google}">구글 로그인</a>
+    <a th:href="@{/register}">회원가입</a>
+</body>
+</html>
